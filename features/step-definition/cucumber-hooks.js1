@@ -1,0 +1,18 @@
+var {Before,BeforeAll,After,AfterAll} = require('cucumber');
+
+BeforeAll(function(){
+    console.log('Inside BeforeAll hooks')
+});
+
+Before("@regression",function(){
+    console.log('Inside Before hooks')
+});
+
+After("@regression",function(){
+    console.log('Inside After hooks')
+});
+
+AfterAll(function(){
+    console.log('Inside AfterAll hooks')
+});
+

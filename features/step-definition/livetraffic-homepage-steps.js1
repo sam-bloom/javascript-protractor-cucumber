@@ -1,0 +1,24 @@
+//require('./cucumber-hooks');
+
+var {Given, When, Then} = require('cucumber');
+
+Given(/^user launches livetraffic website$/, function () {
+    return console.log('Given - user launches livetraffic website');
+  });
+
+When(/^user validate the homepage title$/, function () {
+    return console.log('When - user validate the homepage title');
+  });
+
+Then(/^user enter valid username as "([^"]*)" and password as "([^"]*)"$/, function (username, password) {
+    return console.log('Then - user enter valid username as '+username+ ' and password as '+password);
+  });
+
+Then(/^user should be see successfull login$/, function () {
+    return console.log('Then - user should be see successfull login');
+  });
+
+Then(/^user enter valid username and password$/, function (dataTable) {
+    var data = dataTable.hashes()[2];
+    return console.log('Then - user enter valid username as '+data['UserName']+' and password as '+data['Password']);
+  });

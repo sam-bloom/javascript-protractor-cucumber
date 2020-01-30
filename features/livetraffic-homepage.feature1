@@ -1,0 +1,9 @@
+Feature: HomePage
+    In order to validate live traffic homepage features
+    As a user
+    I want to launch and land on homepage
+
+    @bvt @smoke
+    Scenario: verify home page
+        Given user launches livetraffic website
+        When user validate the homepage title

@@ -1,0 +1,26 @@
+{
+  "name": "live-traffic-test-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cuke-test": ".\\node_modules\\.bin\\cucumber-js --format=json:cucumber_report.json && node index.js",
+    "livetraffic-test": "protractor protractor.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^6.0.5",
+    "properties": "^1.2.1",
+    "properties-reader": "^1.0.0",
+    "reader": "0.0.8"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.1.0",
+    "protractor-cucumber-framework": "^6.2.0",
+    "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.1"
+  }
+}

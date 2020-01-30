@@ -1,0 +1,30 @@
+Feature: Live Traffic User Login
+
+    In order to perform successfull Login
+    As a user
+    I want to enter correct username and password
+
+    Background:
+        Given user launches livetraffic website
+
+    @regression
+    Scenario Outline: verify single user login
+
+        When user validate the homepage title
+        Then user enter valid username as "<username>" and password as "<password>"
+        Then user should be see successfull login
+
+        Examples:
+            | username         | password    |
+            | samuel.allimuthu | password123 |
+
+    @regression
+    Scenario: verify multiple user login
+
+        When user validate the homepage title
+        Then user enter valid username and password
+            | UserName         | Password |
+            | samuel.allimuthu | Hello123 |
+            | samuel123        | pass01   |
+            | swathi           | temp001  |
+        Then user should be see successfull login

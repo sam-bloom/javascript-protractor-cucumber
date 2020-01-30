@@ -1,0 +1,12 @@
+//require('./cucumber-hooks');
+
+var {Given, When, Then} = require('cucumber');
+
+Given(/^I go to "([^"]*)"$/, function (website) {
+    browser.get(website);
+    return console.log('Given - user launches livetraffic website '+website);
+  });
+
+  When(/^user validate the homepage title$/, function () {
+    return console.log('When - user validate the homepage title');
+  });
